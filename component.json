@@ -1,0 +1,21 @@
+{
+  "name": "buzzwords",
+  "version": "0.1.0",
+  "description": "List of (possible) English buzzword words",
+  "license": "MIT",
+  "keywords": [
+    "buzzword",
+    "word",
+    "list"
+  ],
+  "repository": "wooorm/buzzwords",
+  "scripts": [
+    "index.js"
+  ],
+  "json": [
+    "data/buzzwords.json"
+  ],
+  "dependencies": {
+    "wooorm/datalist-interface": "~0.0.1"
+  }
+}

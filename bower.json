@@ -1,0 +1,31 @@
+{
+  "name": "buzzwords",
+  "main": "index.js",
+  "description": "List of (possible) English buzzword words",
+  "license": "MIT",
+  "keywords": [
+    "buzzword",
+    "word",
+    "list"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/buzzwords.git"
+  },
+  "authors": [
+    "Titus Wormer <tituswormer@gmail.com>"
+  ],
+  "dependencies": {
+    "datalist-interface": "~0.0.1"
+  },
+  "ignore": [
+    ".*",
+    "*.log",
+    "*.md",
+    "component.json",
+    "package.json",
+    "coverage",
+    "node_modules",
+    "spec"
+  ]
+}
