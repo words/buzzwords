@@ -52,6 +52,7 @@ Note that the list is scraped from [WikiPedia](http://en.wikipedia.org/wiki/List
 
 - [fillers](https://github.com/wooorm/fillers) — List of filler words;
 - [hedges](https://github.com/wooorm/hedges) — List of hedge words;
+- [profanities](https://github.com/wooorm/profanities) — List of profane words;
 - [weasels](https://github.com/wooorm/weasels) — List of weasel words.
 
 ## License
