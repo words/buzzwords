@@ -1,5 +1,5 @@
 
-n.n.n / 2014-10-03
+0.1.2 / 2014-10-03
 ==================
 
  * Update eslint, plain-text-data-to-json
