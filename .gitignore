@@ -4,3 +4,4 @@ components
 .DS_Store
 coverage
 spec/browser.spec.js
+*.log

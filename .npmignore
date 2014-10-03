@@ -1,2 +1,8 @@
+node_modules
+bower_components
+components
+.DS_Store
 coverage
+spec/browser.spec.js
+*.log
 .travis.yml
