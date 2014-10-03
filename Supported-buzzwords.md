@@ -127,6 +127,7 @@ Supported Buzzwords
 * “mashup”;
 * “milestone”;
 * “mindshare”;
+* “misogynist”;
 * “mission critical”;
 * “mobile”;
 * “modularity”;
