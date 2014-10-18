@@ -22,10 +22,16 @@
     ".*",
     "*.log",
     "*.md",
+    "build/",
+    "components/",
+    "coverage/",
+    "node_modules/",
+    "spec/",
+    "build-data.js",
+    "build-supported-words.js",
+    "scrape-data.js",
     "component.json",
     "package.json",
-    "coverage",
-    "node_modules",
-    "spec"
+    "data/buzzwords.txt"
   ]
 }
