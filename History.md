@@ -1,4 +1,18 @@
 
+n.n.n / 2014-10-18
+==================
+
+ * Refactor scripts
+ * Refactor index.js
+ * Move scripts to `script/`
+ * Move `build-supported-words.js` to `build-support.js`
+ * Move `spec/` to `test.js`
+ * Remove browser test
+ * Remove testling
+ * Update .gitignore, .npmignore, bower ignore
+ * Update datalist-interface
+ * Rebuild, add `performant`
+
 0.1.2 / 2014-10-03
 ==================
 
