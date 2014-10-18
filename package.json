@@ -31,11 +31,9 @@
     "lint-api": "node_modules/.bin/eslint index.js scrape-data.js build-data.js build-supported-words.js --env node --env browser --rule 'quotes: [2, single]'",
     "lint-test": "node_modules/.bin/eslint spec/buzzwords.spec.js --env node --env mocha --rule 'quotes: [2, single]'",
     "lint-style": "node_modules/.bin/jscs index.js scrape-data.js build-data.js build-supported-words.js spec/buzzwords.spec.js --reporter=inline",
-    "install-browser-test": "npm install browserify",
     "scrape-data": "node scrape-data.js",
     "build-data": "node build-data.js",
     "build-supported-words": "node build-supported-words.js",
-    "build-browser-test": "node_modules/.bin/browserify spec/buzzwords.spec.js -o spec/browser.spec.js",
     "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -- spec/buzzwords.spec.js",
     "prepublish": "npm run scrape-data && npm run build-data && npm run build-supported-words",
     "make": "npm run lint && npm run coverage"
