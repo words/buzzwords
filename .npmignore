@@ -5,10 +5,10 @@ bower_components/
 components/
 coverage/
 node_modules/
-spec/
 build-data.js
 build-supported-words.js
 scrape-data.js
+test.js
 bower.json
 component.json
 History.md
