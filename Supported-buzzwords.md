@@ -148,6 +148,7 @@ Supported Buzzwords
 * “paradigm shift”;
 * “part of our dna”;
 * “peel back the onion”;
+* “performant”;
 * “pizzazz”;
 * “plutocracy”;
 * “podcasting”;
