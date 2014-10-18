@@ -1,17 +1,23 @@
 'use strict';
 
-var fs, Scraper, scraper;
+/**
+ * Dependencies.
+ */
+
+var fs,
+    Scraper;
 
 fs = require('fs');
-Scraper = require('scraperjs').DynamicScraper;
-scraper = Scraper.create('http://en.wikipedia.org/wiki/List_of_buzzwords');
+Scraper = require('scraperjs');
+
+/**
+ * Scrape.
+ */
 
 function scrape() {
-    var nodes = Array.prototype.slice.call(
-        document.querySelectorAll('#mw-content-text > ul li')
-    );
-
-    return nodes
+    return Array.prototype.slice.call(
+            document.querySelectorAll('#mw-content-text > ul li')
+        )
         .filter(function (node) {
             return !node.className.trim();
         })
@@ -26,31 +32,42 @@ function scrape() {
 }
 
 function parse(values) {
-    values = values
-        .map(function (value) {
-            // Remove cites.
-            value = value.replace(/\[[^\]]+\]/g, '');
+    values = values.map(function (value) {
+        var match;
 
-            // Split comment from buzz word.
-            var match = value.match(/^([\s\S+]+?)( [-–/] ?|\()/);
+        /*
+         * Remove cites.
+         */
 
-            if (match) {
-                value = match[1];
-            }
+        value = value.replace(/\[[^\]]+\]/g, '');
 
-            return value.toLowerCase().trim();
-        })
-        .filter(function (value) {
-            return Boolean(value);
-        });
+        /*
+         * Split comment from buzz word.
+         */
+
+        match = value.match(/^([\s\S+]+?)( [-–/] ?|\()/);
+
+        if (match) {
+            value = match[1];
+        }
+
+        return value.toLowerCase().trim();
+    })
+    .filter(function (value) {
+        return Boolean(value);
+    });
 
     return values.filter(function (value, index) {
         return values.indexOf(value, index + 1) === -1;
     });
 }
 
-function save(results) {
-    fs.writeFileSync('data/buzzwords.txt', parse(results).join('\n') + '\n');
-}
+/**
+ * Scraper.
+ */
 
-scraper.scrape(scrape, save);
+Scraper.DynamicScraper.create(
+    'http://en.wikipedia.org/wiki/List_of_buzzwords'
+).scrape(scrape, function (results) {
+    fs.writeFileSync('data/buzzwords.txt', parse(results).join('\n') + '\n');
+});

@@ -1,15 +1,26 @@
 'use strict';
 
-var fs = require('fs'),
-    words = require('../data/buzzwords.json');
+/**
+ * Dependencies.
+ */
+
+var fs,
+    buzzwords;
+
+fs = require('fs');
+buzzwords = require('..');
+
+/**
+ * Write.
+ */
 
 fs.writeFileSync('Supported-buzzwords.md',
     'Supported Buzzwords\n' +
     '=================\n' +
     '\n' +
 
-    words.map(function (word) {
-        return '* “' + word + '”';
+    buzzwords.all().map(function (buzzword) {
+        return '* “' + buzzword + '”';
     }).join(';\n') +
 
     '.\n'
