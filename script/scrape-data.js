@@ -15,13 +15,17 @@ Scraper = require('scraperjs');
  */
 
 function scrape() {
-    return Array.prototype.slice.call(
-            document.querySelectorAll('#mw-content-text > ul li')
-        )
+    return Array.prototype.slice.call(document.querySelectorAll(
+            '#mw-content-text > ul li, .columns > ul li'
+        ))
         .filter(function (node) {
             return !node.className.trim();
         })
         .filter(function (node) {
+            if (!node.parentNode.previousElementSibling) {
+                return true;
+            }
+
             return !/see also|external links/i.test(
                 node.parentNode.previousElementSibling.textContent
             );
