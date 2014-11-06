@@ -8,14 +8,14 @@
     "word",
     "list"
   ],
+  "dependencies": {
+    "wooorm/datalist-interface": "^0.1.0"
+  },
   "repository": "wooorm/buzzwords",
   "scripts": [
     "index.js"
   ],
   "json": [
     "data/buzzwords.json"
-  ],
-  "dependencies": {
-    "wooorm/datalist-interface": "^0.1.0"
-  }
+  ]
 }
