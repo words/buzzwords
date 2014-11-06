@@ -1,9 +1,18 @@
 'use strict';
 
-var buzzwords, assert;
+/**
+ * Dependencies.
+ */
+
+var buzzwords,
+    assert;
 
 buzzwords = require('./');
 assert = require('assert');
+
+/**
+ * Tests.
+ */
 
 describe('buzzwords', function () {
     it('should be an `Object`', function () {
@@ -22,29 +31,26 @@ describe('buzzwords.is(word)', function () {
 });
 
 describe('buzzwords.all()', function () {
-    var all = buzzwords.all();
+    var all;
+
+    all = buzzwords.all();
 
     it('should return an array', function () {
         assert('length' in all);
+
         assert(typeof all === 'object');
     });
 
     it('every entry should be lowercase', function () {
-        var iterator = -1,
-            length = all.length;
-
-        while (++iterator < length) {
-            assert(all[iterator].toLowerCase() === all[iterator]);
-        }
+        all.forEach(function (value) {
+            assert(value.toLowerCase() === value);
+        });
     });
 
     it('every entry should only occur once', function () {
-        var iterator = -1,
-            length = all.length;
-
-        while (++iterator < length) {
-            assert(all.indexOf(all[iterator], iterator + 1) === -1);
-        }
+        all.forEach(function (value, index) {
+            assert(all.indexOf(value, index + 1) === -1);
+        });
     });
 
     it('should be immutable', function () {
@@ -60,9 +66,11 @@ describe('buzzwords.add(buzzword) and buzzwords.remove(buzzword)',
             assert(buzzwords.is('unicorn') === false);
 
             buzzwords.add('unicorn');
+
             assert(buzzwords.is('unicorn') === true);
 
             buzzwords.remove('unicorn');
+
             assert(buzzwords.is('unicorn') === false);
         });
 
@@ -71,10 +79,12 @@ describe('buzzwords.add(buzzword) and buzzwords.remove(buzzword)',
             assert(buzzwords.is('rainbow') === false);
 
             buzzwords.add('unicorn', 'rainbow');
+
             assert(buzzwords.is('unicorn') === true);
             assert(buzzwords.is('rainbow') === true);
 
             buzzwords.remove('unicorn', 'rainbow');
+
             assert(buzzwords.is('unicorn') === false);
             assert(buzzwords.is('rainbow') === false);
         });
@@ -82,7 +92,9 @@ describe('buzzwords.add(buzzword) and buzzwords.remove(buzzword)',
         it('should fail silently when removing a non-existing buzzword',
             function () {
                 assert(buzzwords.is('unicorn') === false);
+
                 buzzwords.remove('unicorn');
+
                 assert(buzzwords.is('unicorn') === false);
             }
         );
