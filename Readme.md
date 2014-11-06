@@ -1,4 +1,4 @@
-# buzzwords [![Build Status](https://travis-ci.org/wooorm/buzzwords.svg?branch=master)](https://travis-ci.org/wooorm/buzzwords) [![Coverage Status](https://img.shields.io/coveralls/wooorm/buzzwords.svg)](https://coveralls.io/r/wooorm/buzzwords?branch=master)
+# buzzwords [![Build Status](https://img.shields.io/travis/wooorm/buzzwords.svg?style=flat)](https://travis-ci.org/wooorm/buzzwords) [![Coverage Status](https://img.shields.io/coveralls/wooorm/buzzwords.svg?style=flat)](https://coveralls.io/r/wooorm/buzzwords?branch=master)
 
 List of _bleeding edge_ English buzzwords.
 
