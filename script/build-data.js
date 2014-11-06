@@ -35,4 +35,4 @@ data.forEach(function (word) {
  * Write.
  */
 
-fs.writeFileSync('data/buzzwords.json', JSON.stringify(data));
+fs.writeFileSync('data/buzzwords.json', JSON.stringify(data, null, 2));
