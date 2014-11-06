@@ -3,6 +3,7 @@ Supported Buzzwords
 
 * “4g”;
 * “accountable talk”;
+* “adaptive learning”;
 * “aggregator”;
 * “agile”;
 * “ajax”;
@@ -24,8 +25,10 @@ Supported Buzzwords
 * “bizmeth”;
 * “bleeding edge”;
 * “blog”;
+* “bloom's taxonomy”;
 * “boil the frog”;
 * “boil the ocean”;
+* “brain break”;
 * “brand”;
 * “break through the clutter”;
 * “brick-and-mortar”;
@@ -49,10 +52,12 @@ Supported Buzzwords
 * “co-opetition”;
 * “collaboration”;
 * “come-to-jesus moment”;
+* “common core”;
 * “content management”;
 * “content management system”;
 * “content marketing”;
 * “convergence”;
+* “cooperative learning”;
 * “core competency”;
 * “countless”;
 * “cross-platform”;
@@ -65,7 +70,9 @@ Supported Buzzwords
 * “deep dive”;
 * “design pattern”;
 * “devops”;
+* “differentiated instruction”;
 * “digital divide”;
+* “digital literacy”;
 * “digital remastering”;
 * “digital rights management”;
 * “digital signage”;
@@ -90,6 +97,7 @@ Supported Buzzwords
 * “exit strategy”;
 * “eyeballs”;
 * “face time”;
+* “flipped classroom”;
 * “folksonomy”;
 * “framework”;
 * “free value”;
@@ -100,9 +108,11 @@ Supported Buzzwords
 * “generation y”;
 * “global citizen”;
 * “globalization”;
+* “going forward”;
 * “granular”;
 * “grow”;
 * “guard rails”;
+* “guided reading”;
 * “headlights”;
 * “herding cats”;
 * “higher-order thinking”;
@@ -115,6 +125,7 @@ Supported Buzzwords
 * “information society”;
 * “information superhighway”;
 * “innovation”;
+* “instructional scaffolding”;
 * “integrated marketing solution”;
 * “invested in”;
 * “knowledge process outsourcing”;
@@ -132,6 +143,7 @@ Supported Buzzwords
 * “mobile”;
 * “modularity”;
 * “moving forward”;
+* “multiple intelligences”;
 * “nanotechnology”;
 * “netiquette”;
 * “new economy”;
@@ -155,6 +167,7 @@ Supported Buzzwords
 * “political capital”;
 * “portal”;
 * “proactive”;
+* “project-based learning”;
 * “push the envelope”;
 * “quick-win”;
 * “reach out”;
