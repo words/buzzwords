@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Dependencies.
  */
 
@@ -10,7 +10,7 @@ var buzzwords,
 buzzwords = require('./');
 assert = require('assert');
 
-/**
+/*
  * Tests.
  */
 

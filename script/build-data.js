@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Dependencies.
  */
 
@@ -10,7 +10,7 @@ var fs,
 fs = require('fs');
 textToJSON = require('plain-text-data-to-json');
 
-/**
+/*
  * Dependencies.
  */
 
@@ -18,7 +18,7 @@ var data;
 
 data = textToJSON(fs.readFileSync('data/buzzwords.txt', 'utf8'));
 
-/**
+/*
  * Make sure no upper- or mixed-case values exist.
  */
 
@@ -31,7 +31,7 @@ data.forEach(function (word) {
     }
 });
 
-/**
+/*
  * Write.
  */
 

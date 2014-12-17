@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Dependencies.
  */
 
@@ -12,8 +12,9 @@ Scraper = require('scraperjs');
 
 /**
  * Scrape.
+ *
+ * @return {Array.<string>}
  */
-
 function scrape() {
     return Array.prototype.slice.call(document.querySelectorAll(
             '#mw-content-text > ul li, .columns > ul li'
@@ -35,6 +36,12 @@ function scrape() {
         });
 }
 
+/**
+ * Parse a list of buzzword-like values.
+ *
+ * @param {Array.<string>} values
+ * @return {Array.<string>}
+ */
 function parse(values) {
     values = values.map(function (value) {
         var match;
@@ -66,7 +73,7 @@ function parse(values) {
     });
 }
 
-/**
+/*
  * Scraper.
  */
 
