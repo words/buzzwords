@@ -98,6 +98,7 @@ generation y
 granular
 guard rails
 herding cats
+hitting our numbers
 holistic
 hyperlocal
 integrated marketing solution
@@ -180,6 +181,7 @@ fuzzy logic
 html5
 immersion
 information superhighway
+internet of things
 innovation
 mashup
 mobile
@@ -223,14 +225,7 @@ big society
 information society
 political capital
 statist
-socialist
-capitalist
 stakeholder
-terrorist
-truthiness
-warfighter
-plutocracy
 global citizen
-misogynist
 antifragile
 best-in-class

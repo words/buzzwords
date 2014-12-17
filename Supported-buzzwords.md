@@ -42,7 +42,6 @@ Supported Buzzwords
 * “buzzword”;
 * “buzzword compliant”;
 * “calibrate expectations”;
-* “capitalist”;
 * “clear goal”;
 * “clickthrough”;
 * “client-centric”;
@@ -116,6 +115,7 @@ Supported Buzzwords
 * “headlights”;
 * “herding cats”;
 * “higher-order thinking”;
+* “hitting our numbers”;
 * “holistic”;
 * “holistic approach”;
 * “html5”;
@@ -127,6 +127,7 @@ Supported Buzzwords
 * “innovation”;
 * “instructional scaffolding”;
 * “integrated marketing solution”;
+* “internet of things”;
 * “invested in”;
 * “knowledge process outsourcing”;
 * “leverage”;
@@ -138,7 +139,6 @@ Supported Buzzwords
 * “mashup”;
 * “milestone”;
 * “mindshare”;
-* “misogynist”;
 * “mission critical”;
 * “mobile”;
 * “modularity”;
@@ -162,7 +162,6 @@ Supported Buzzwords
 * “peel back the onion”;
 * “performant”;
 * “pizzazz”;
-* “plutocracy”;
 * “podcasting”;
 * “political capital”;
 * “portal”;
@@ -192,7 +191,6 @@ Supported Buzzwords
 * “social bookmarking”;
 * “social currency”;
 * “social software”;
-* “socialist”;
 * “socialize”;
 * “solution”;
 * “sox”;
@@ -215,12 +213,10 @@ Supported Buzzwords
 * “tagging”;
 * “talent relationship management”;
 * “tee off”;
-* “terrorist”;
 * “think outside the box”;
 * “touch base”;
 * “touchpoint”;
 * “transmedia”;
-* “truthiness”;
 * “user generated content”;
 * “value-added”;
 * “viral”;
@@ -228,7 +224,6 @@ Supported Buzzwords
 * “visibility”;
 * “vlogging”;
 * “vortal”;
-* “warfighter”;
 * “web 2.0”;
 * “web services”;
 * “webinar”;
