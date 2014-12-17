@@ -1,4 +1,18 @@
 
+n.n.n / 2014-12-17
+==================
+
+ * Move `Supported-buzzwords.md` to `Support.md`
+ * Refactor to adhere to strict jsdoc style
+ * Add jscs-jsdoc configuration to `.jscs.json`
+ * Add jscs-jsdoc as a dev-dependency
+ * Refactor npm scripts for changes in npm
+ * Add link to personal website to copyright in `Readme.md`
+ * Fix incorrect executive rights on `test.js`
+ * Update datalist-interface
+ * Update eslint
+ * Rebuild
+
 0.2.1 / 2014-11-06
 ==================
 
