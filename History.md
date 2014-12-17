@@ -1,5 +1,5 @@
 
-n.n.n / 2014-12-17
+0.2.2 / 2014-12-17
 ==================
 
  * Move `Supported-buzzwords.md` to `Support.md`
