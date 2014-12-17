@@ -14,7 +14,7 @@ buzzwords = require('..');
  * Write.
  */
 
-fs.writeFileSync('Supported-buzzwords.md',
+fs.writeFileSync('Support.md',
     'Supported Buzzwords\n' +
     '=================\n' +
     '\n' +

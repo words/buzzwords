@@ -40,7 +40,7 @@ buzzwords.is('unicorn'); // false
 
 ## Supported words
 
-For a complete list of _next generation_ buzzwords and -phrases, see [Supported-buzzwords.md](Supported-buzzwords.md).
+For a complete list of _next generation_ buzzwords and -phrases, see [Support.md](Support.md).
 
 Note that the _countless_ words listed in **buzzwords** might **not** be buzzwords in certain contexts; the list just takes a _holistic approach_ in _cloud computing_ with a _bleeding edge_ _algorithm_.
 
