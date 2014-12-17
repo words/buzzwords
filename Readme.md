@@ -57,4 +57,4 @@ Note that the list is scraped from [WikiPedia](http://en.wikipedia.org/wiki/List
 
 ## License
 
-MIT © Titus Wormer
+MIT © [Titus Wormer](http://wooorm.com)
