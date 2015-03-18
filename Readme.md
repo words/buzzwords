@@ -75,4 +75,4 @@ Note that the list is scraped from [WikiPedia](http://en.wikipedia.org/wiki/List
 
 ## License
 
-MIT © [Titus Wormer](http://wooorm.com)
+[MIT](LICENSE) © [Titus Wormer](http://wooorm.com)
