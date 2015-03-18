@@ -28,6 +28,7 @@ Supported Buzzwords
 * “bloom's taxonomy”;
 * “boil the frog”;
 * “boil the ocean”;
+* “booger flicker”;
 * “brain break”;
 * “brand”;
 * “break through the clutter”;
@@ -42,6 +43,8 @@ Supported Buzzwords
 * “buzzword”;
 * “buzzword compliant”;
 * “calibrate expectations”;
+* “cast a wider net”;
+* “cbow”;
 * “clear goal”;
 * “clickthrough”;
 * “client-centric”;
@@ -81,6 +84,7 @@ Supported Buzzwords
 * “document management”;
 * “dot-bomb”;
 * “downsizing”;
+* “drain the pond”;
 * “drinking the kool-aid”;
 * “e-learning”;
 * “eating your own dogfood”;
@@ -99,6 +103,7 @@ Supported Buzzwords
 * “flipped classroom”;
 * “folksonomy”;
 * “framework”;
+* “free”;
 * “free value”;
 * “fulfilment issues”;
 * “functional training”;
@@ -147,6 +152,7 @@ Supported Buzzwords
 * “nanotechnology”;
 * “netiquette”;
 * “new economy”;
+* “new normal”;
 * “new sincerity”;
 * “next generation”;
 * “offshoring”;
@@ -158,9 +164,11 @@ Supported Buzzwords
 * “pandering”;
 * “paradigm”;
 * “paradigm shift”;
+* “paralysis by analysis”;
 * “part of our dna”;
 * “peel back the onion”;
 * “performant”;
+* “pick and shovel work”;
 * “pizzazz”;
 * “podcasting”;
 * “political capital”;
@@ -186,6 +194,7 @@ Supported Buzzwords
 * “serum”;
 * “share options”;
 * “shoot”;
+* “short runway”;
 * “sisterhood”;
 * “skeuomorphic”;
 * “social bookmarking”;
@@ -213,10 +222,15 @@ Supported Buzzwords
 * “tagging”;
 * “talent relationship management”;
 * “tee off”;
+* “the sale is completed. we just have the pick and shovel work left.”;
 * “think outside the box”;
 * “touch base”;
 * “touchpoint”;
 * “transmedia”;
+* “transparency”;
+* “unpack”;
+* “upcycling”;
+* “upselling”;
 * “user generated content”;
 * “value-added”;
 * “viral”;
@@ -224,11 +238,14 @@ Supported Buzzwords
 * “visibility”;
 * “vlogging”;
 * “vortal”;
+* “we need all hands on deck”;
 * “web 2.0”;
 * “web services”;
 * “webinar”;
 * “weblog”;
 * “wellness”;
+* “wheelhouse”;
 * “wikiality”;
 * “win-win”;
+* “wood behind the arrow”;
 * “workflow”.
