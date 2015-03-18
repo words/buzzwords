@@ -22,6 +22,12 @@ $ component install wooorm/buzzwords
 $ bower install buzzwords
 ```
 
+[Duo](http://duojs.org/#getting-started):
+
+```javascript
+var buzzwords = require('wooorm/buzzwords');
+```
+
 ## Usage
 
 ```javascript
