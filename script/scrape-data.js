@@ -4,11 +4,8 @@
  * Dependencies.
  */
 
-var fs,
-    Scraper;
-
-fs = require('fs');
-Scraper = require('scraperjs');
+var fs = require('fs');
+var Scraper = require('scraperjs');
 
 /**
  * Scrape.

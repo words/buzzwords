@@ -4,19 +4,14 @@
  * Dependencies.
  */
 
-var fs,
-    textToJSON;
-
-fs = require('fs');
-textToJSON = require('plain-text-data-to-json');
+var fs = require('fs');
+var textToJSON = require('plain-text-data-to-json');
 
 /*
  * Dependencies.
  */
 
-var data;
-
-data = textToJSON(fs.readFileSync('data/buzzwords.txt', 'utf8'));
+var data = textToJSON(fs.readFileSync('data/buzzwords.txt', 'utf8'));
 
 /*
  * Make sure no upper- or mixed-case values exist.

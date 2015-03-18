@@ -38,9 +38,6 @@
   "requireSpaceBeforeBlockStatements": true,
   "requireParenthesesAroundIIFE": true,
   "requireSpacesInConditionalExpression": true,
-  "requireSpacesInFunctionExpression": {
-    "beforeOpeningCurlyBrace": true
-  },
   "requireSpacesInAnonymousFunctionExpression": {
     "beforeOpeningRoundBrace": true,
     "beforeOpeningCurlyBrace": true
@@ -49,7 +46,9 @@
     "beforeOpeningRoundBrace": true,
     "beforeOpeningCurlyBrace": true
   },
-  "requireMultipleVarDecl": true,
+  "requireSpacesInFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
   "requireBlocksOnNewline": true,
   "disallowPaddingNewlinesInBlocks": true,
   "disallowEmptyBlocks": true,

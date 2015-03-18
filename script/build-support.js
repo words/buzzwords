@@ -4,11 +4,8 @@
  * Dependencies.
  */
 
-var fs,
-    buzzwords;
-
-fs = require('fs');
-buzzwords = require('..');
+var fs = require('fs');
+var buzzwords = require('..');
 
 /*
  * Write.

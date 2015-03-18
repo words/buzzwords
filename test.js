@@ -4,11 +4,8 @@
  * Dependencies.
  */
 
-var buzzwords,
-    assert;
-
-buzzwords = require('./');
-assert = require('assert');
+var buzzwords = require('./');
+var assert = require('assert');
 
 /*
  * Tests.
@@ -31,9 +28,7 @@ describe('buzzwords.is(word)', function () {
 });
 
 describe('buzzwords.all()', function () {
-    var all;
-
-    all = buzzwords.all();
+    var all = buzzwords.all();
 
     it('should return an array', function () {
         assert('length' in all);
