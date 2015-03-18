@@ -19,6 +19,7 @@
   "devDependencies": {
     "browserify": "^9.0.0",
     "eslint": "^0.17.0",
+    "esmangle": "^1.0.0",
     "istanbul": "^0.3.0",
     "jscs": "^1.0.0",
     "jscs-jsdoc": "^0.4.0",
