@@ -5,23 +5,26 @@ List of _bleeding edge_ English buzzwords.
 ## Installation
 
 npm:
-```sh
+
+```bash
 $ npm install buzzwords
 ```
 
 Component:
-```sh
+
+```bash
 $ component install wooorm/buzzwords
 ```
 
 Bower:
-```sh
+
+```bash
 $ bower install buzzwords
 ```
 
 ## Usage
 
-```js
+```javascript
 var buzzwords = require('buzzwords');
 
 buzzwords.is('cloud'); // true
