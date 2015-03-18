@@ -50,13 +50,19 @@ function parse(values) {
          * Remove cites.
          */
 
-        value = value.replace(/\[[^\]]+\]/g, '');
+        value = value.replace(/\[[^\]]+\]\*?/g, '');
+
+        /*
+         * Remove initial (incorrect) dash.
+         */
+
+        value = value.replace(/^-\s*/g, '');
 
         /*
          * Split comment from buzz word.
          */
 
-        match = value.match(/^([\s\S+]+?)( [-–/] ?|\()/);
+        match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/);
 
         if (match) {
             value = match[1];
