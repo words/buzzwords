@@ -1,3 +1,22 @@
+0.3.0 / 2015-03-18
+==================
+
+*   Refactor code style ([43fd505](https://github.com/wooorm/buzzwords/commit/43fd505))
+*   Update `.travis.yml` ([d96e36d](https://github.com/wooorm/buzzwords/commit/d96e36d))
+*   Update copyright notice in `LICENSE` to include 2015 ([1867688](https://github.com/wooorm/buzzwords/commit/1867688))
+*   Add link to whole license in `Readme.md` ([5559830](https://github.com/wooorm/buzzwords/commit/5559830))
+*   Add `buzzwords.js`, `buzzwords.min.js` ([39cabf1](https://github.com/wooorm/buzzwords/commit/39cabf1))
+*   Add esmangle as a dev-dependency ([2bbf822](https://github.com/wooorm/buzzwords/commit/2bbf822))
+*   Add browserify as a dev-dependency ([9d39845](https://github.com/wooorm/buzzwords/commit/9d39845))
+*   Add duo as an installation method in `Readme.md` ([c7381a6](https://github.com/wooorm/buzzwords/commit/c7381a6))
+*   Add links to installation methods in `Readme.md` ([b340c5f](https://github.com/wooorm/buzzwords/commit/b340c5f))
+*   Fix fenced code block language-flags in `Readme.md` ([97766b5](https://github.com/wooorm/buzzwords/commit/97766b5))
+*   Rebuild ([09a35c8](https://github.com/wooorm/buzzwords/commit/09a35c8))
+*   Update `script/scrape-data.js` with new exceptions ([40cdebd](https://github.com/wooorm/buzzwords/commit/40cdebd))
+*   Update jscs-jsdoc ([3b9d585](https://github.com/wooorm/buzzwords/commit/3b9d585))
+*   Update eslint ([b4317c9](https://github.com/wooorm/buzzwords/commit/b4317c9))
+*   Add `build.js` to `.npmignore`, `.gitignore` ([197bcc4](https://github.com/wooorm/buzzwords/commit/197bcc4))
+
 0.2.2 / 2014-12-17
 ==================
 
