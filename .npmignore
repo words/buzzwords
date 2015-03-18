@@ -9,7 +9,9 @@ node_modules/
 script/
 bower.json
 component.json
-test.js
 build.js
+buzzwords.js
+buzzwords.min.js
+test.js
 History.md
 Support.md

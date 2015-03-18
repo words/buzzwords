@@ -28,6 +28,15 @@ $ bower install buzzwords
 var buzzwords = require('wooorm/buzzwords');
 ```
 
+UMD: globals, AMD, and CommonJS ([uncompressed](buzzwords.js) and [compressed](buzzwords.min.js)):
+
+```html
+<script src="path/to/buzzwords.js"></script>
+<script>
+  console.log(buzzwords);
+</script>
+```
+
 ## Usage
 
 ```javascript

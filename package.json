@@ -40,7 +40,9 @@
     "scrape-data": "node script/scrape-data.js",
     "build-data": "node script/build-data.js",
     "build-support": "node script/build-support.js",
-    "build": "npm run scrape-data && npm run build-data && npm run build-support",
+    "bundle": "browserify index.js -s buzzwords > buzzwords.js",
+    "postbundle": "esmangle buzzwords.js > buzzwords.min.js",
+    "build": "npm run scrape-data && npm run build-data && npm run build-support && npm run bundle",
     "prepublish": "npm run build"
   }
 }
