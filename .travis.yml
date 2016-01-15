@@ -1,16 +1,25 @@
 language: node_js
-script: npm run-script test-travis
 node_js:
 - '0.10'
 - '0.11'
 - '0.12'
+- '4.0'
+- '5.0'
 - iojs
-after_script: npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls
 sudo: false
+after_script: npm install codecov.io && cat ./coverage/lcov.info | codecov
 deploy:
-  provider: npm
-  email: tituswormer@gmail.com
-  api_key:
-    secure: DKLFnvgf9ParNWemzO9Xf+xTi3Ervjhfo4AuxLOcNIYY1qtzl2CqOCOHaC3B54EhmCD0owiytdk3AwsEIc0fxyA7sh70GM97HmI9MsmbIdsa6zOuXCzxs197WhQaP6oWXNrOUeihXmANgj32WP9/vRhlaqHP2WCoruAC23doF1Q=
-  on:
-    repo: wooorm/buzzwords
+  - provider: npm
+    email: tituswormer@gmail.com
+    api_key:
+        secure: C6RQy/wzWpGIsAcr0/ygVvtSr7tqBq/213uk5qlVYsa+2lgivp6cT0HbZL/FQmqi/AO8UOu86ZX7vHTEiZGH0AivfIg40QYZzDqChnqaUsirbh8alvcNcWaM2m3Jrwp3jmI9+tzka8hXN2F4Jleh+DLIhbdcF9rO9LhC5CI1R3E=
+    on:
+      tags: true
+  - provider: releases
+    api_key:
+        secure: MgivSHNf155rM2ADqD7O/DjII4pZE/4rghLe96xrFa3kbr9+C5SfrwEG9DQ5YEFq1bQnkvS3jGOUiWB5oA0AGU3AofpGh/vxxOlMQ9O0re0ATi+CBnjFpsPT27BDSG0l0YnEtOGRuTF7KTRCSLmMhlRLFZHsqardeavfc+EeufM=
+    file:
+      - "buzzwords.js"
+      - "buzzwords.min.js"
+    on:
+      tags: true

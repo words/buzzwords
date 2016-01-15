@@ -1,19 +1,17 @@
+/**
+ * @author Titus Wormer
+ * @copyright 2016 Titus Wormer
+ * @license MIT
+ * @module buzzwords
+ * @fileoverview List of (possible) English buzzwords.
+ */
+
 'use strict';
 
-/*
- * Dependencies.
- */
-
-var Interface = require('datalist-interface');
+/* eslint-env commonjs */
 
 /*
- * Data.
+ * Expose.
  */
 
-var words = require('./data/buzzwords.json');
-
-/*
- * Expose buzzwords.
- */
-
-module.exports = new Interface(words);
+module.exports = require('./data/index.json');

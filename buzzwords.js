@@ -25,9 +25,6 @@ module.exports=[
   "bleeding edge",
   "blog",
   "bloom's taxonomy",
-  "boil the frog",
-  "boil the ocean",
-  "booger flicker",
   "brain break",
   "brand",
   "break through the clutter",
@@ -41,9 +38,7 @@ module.exports=[
   "business-to-consumer",
   "buzzword",
   "buzzword compliant",
-  "calibrate expectations",
-  "cast a wider net",
-  "cbow",
+  "circle back",
   "clear goal",
   "clickthrough",
   "client-centric",
@@ -60,15 +55,14 @@ module.exports=[
   "convergence",
   "cooperative learning",
   "core competency",
-  "countless",
+  "creative",
   "cross-platform",
-  "crowdsourcing",
-  "crystallization",
   "customer-centric",
   "data mining",
   "data science",
   "datafication",
   "deep dive",
+  "deep web",
   "design pattern",
   "devops",
   "differentiated instruction",
@@ -83,9 +77,9 @@ module.exports=[
   "document management",
   "dot-bomb",
   "downsizing",
-  "drain the pond",
   "drinking the kool-aid",
   "e-learning",
+  "early-stage",
   "eating your own dogfood",
   "employer branding",
   "empowerment",
@@ -102,26 +96,23 @@ module.exports=[
   "flipped classroom",
   "folksonomy",
   "framework",
-  "free",
   "free value",
   "fulfilment issues",
-  "functional training",
   "fuzzy logic",
   "generation x",
   "generation y",
-  "global citizen",
   "globalization",
   "going forward",
+  "graham logic",
   "granular",
   "grow",
-  "guard rails",
   "guided reading",
   "headlights",
   "herding cats",
   "higher-order thinking",
-  "hitting our numbers",
   "holistic",
   "holistic approach",
+  "home",
   "html5",
   "hyperlocal",
   "immersion",
@@ -129,19 +120,20 @@ module.exports=[
   "information society",
   "information superhighway",
   "innovation",
+  "innovative",
   "instructional scaffolding",
-  "integrated marketing solution",
   "internet of things",
   "invested in",
   "knowledge process outsourcing",
   "leverage",
+  "like cunts",
   "logistics",
   "long tail",
   "low hanging fruit",
   "make it pop",
   "management visibility",
   "mashup",
-  "milestone",
+  "millennial",
   "mindshare",
   "mission critical",
   "mobile",
@@ -152,8 +144,8 @@ module.exports=[
   "netiquette",
   "new economy",
   "new normal",
-  "new sincerity",
   "next generation",
+  "object-oriented programming",
   "offshoring",
   "on the runway",
   "organic growth",
@@ -164,26 +156,25 @@ module.exports=[
   "paradigm",
   "paradigm shift",
   "paralysis by analysis",
+  "parsing",
   "part of our dna",
+  "passionate",
   "peel back the onion",
-  "performant",
   "pick and shovel work",
-  "pizzazz",
   "podcasting",
   "political capital",
   "portal",
   "proactive",
+  "profit center",
   "project-based learning",
   "push the envelope",
   "quick-win",
   "reach out",
   "real-time",
-  "relaying",
   "responsive",
   "return on investment",
   "reverse fulfilment",
   "rightshoring",
-  "robust",
   "run like a business",
   "saas",
   "scalability",
@@ -192,8 +183,8 @@ module.exports=[
   "sensorization",
   "serum",
   "share options",
-  "shoot",
   "short runway",
+  "silo",
   "sisterhood",
   "skeuomorphic",
   "social bookmarking",
@@ -221,12 +212,10 @@ module.exports=[
   "tagging",
   "talent relationship management",
   "tee off",
-  "the sale is completed. we just have the pick and shovel work left.",
   "think outside the box",
   "touch base",
   "touchpoint",
   "transmedia",
-  "transparency",
   "unpack",
   "upcycling",
   "upselling",
@@ -237,7 +226,6 @@ module.exports=[
   "visibility",
   "vlogging",
   "vortal",
-  "we need all hands on deck",
   "web 2.0",
   "web services",
   "webinar",
@@ -246,142 +234,27 @@ module.exports=[
   "wheelhouse",
   "wikiality",
   "win-win",
-  "wood behind the arrow",
   "workflow"
 ]
+
 },{}],2:[function(require,module,exports){
+/**
+ * @author Titus Wormer
+ * @copyright 2016 Titus Wormer
+ * @license MIT
+ * @module buzzwords
+ * @fileoverview List of (possible) English buzzwords.
+ */
+
 'use strict';
 
-/*
- * Dependencies.
- */
-
-var Interface;
-
-Interface = require('datalist-interface');
+/* eslint-env commonjs */
 
 /*
- * Data.
+ * Expose.
  */
 
-var words;
+module.exports = require('./data/index.json');
 
-words = require('./data/buzzwords.json');
-
-/*
- * Expose buzzwords.
- */
-
-module.exports = new Interface(words);
-
-},{"./data/buzzwords.json":1,"datalist-interface":3}],3:[function(require,module,exports){
-'use strict';
-
-/**
- * An interface for a list of items.
- *
- * @constructor
- * @param {Array.<*>} values
- */
-function DatalistInterface(values) {
-    this.values = [];
-    this.add.apply(this, values);
-}
-
-/**
- * Add all arguments.
- *
- * @this DatalistInterface
- * @return {DatalistInterface} - Self.
- */
-function add(/* values... */) {
-    var self;
-
-    self = this;
-
-    self.values.push.apply(self.values, arguments);
-
-    return self;
-}
-
-/**
- * Remove all arguments.
- *
- * @this DatalistInterface
- * @return {DatalistInterface} - Self.
- */
-function remove(/* values... */) {
-    var values,
-        index,
-        position;
-
-    values = this.values;
-    index = arguments.length;
-
-    while (index--) {
-        position = values.indexOf(arguments[index]);
-
-        if (position !== -1) {
-            values.splice(position, 1);
-        }
-    }
-
-    return this;
-}
-
-/**
- * Whether or not `value` is in context.
- *
- * @this DatalistInterface
- * @param {*} value
- * @return {boolean}
- */
-function is(value) {
-    return this.values.indexOf(value) !== -1;
-}
-
-/**
- * Get all values.
- *
- * @this DatalistInterface
- * @return {Array.<*>}
- */
-function all() {
-    return this.values.concat();
-}
-
-/**
- * Stringify all values.
- *
- * @this DatalistInterface
- * @return {string}
- */
-function toString() {
-    return this.values.toString();
-}
-
-/*
- * Expose methods on prototype.
- */
-
-var datalistInterfacePrototype;
-
-datalistInterfacePrototype = DatalistInterface.prototype;
-
-datalistInterfacePrototype.add = add;
-datalistInterfacePrototype.remove = remove;
-datalistInterfacePrototype.is = is;
-datalistInterfacePrototype.has = is;
-datalistInterfacePrototype.all = all;
-datalistInterfacePrototype.valueOf = all;
-datalistInterfacePrototype.toJSON = all;
-datalistInterfacePrototype.toString = toString;
-
-/*
- * Expose `DatalistInterface`.
- */
-
-module.exports = DatalistInterface;
-
-},{}]},{},[2])(2)
+},{"./data/index.json":1}]},{},[2])(2)
 });

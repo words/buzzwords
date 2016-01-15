@@ -1,48 +1,52 @@
 {
   "name": "buzzwords",
   "version": "0.3.0",
-  "description": "List of (possible) English buzzword words",
+  "description": "List of (possible) English buzzwords",
   "license": "MIT",
   "keywords": [
     "buzzword",
     "word",
     "list"
   ],
-  "dependencies": {
-    "datalist-interface": "^0.2.0"
-  },
+  "files": [
+    "index.js",
+    "data/index.json"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/wooorm/buzzwords.git"
   },
-  "author": "Titus Wormer <tituswormer@gmail.com>",
+  "bugs": "https://github.com/wooorm/buzzwords/issues",
+  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "dependencies": {},
   "devDependencies": {
-    "browserify": "^9.0.0",
-    "eslint": "^0.17.0",
+    "browserify": "^13.0.0",
+    "eslint": "^1.0.0",
     "esmangle": "^1.0.0",
-    "istanbul": "^0.3.0",
-    "jscs": "^1.0.0",
-    "jscs-jsdoc": "^0.4.0",
-    "mocha": "^2.0.0",
-    "plain-text-data-to-json": "^0.1.0",
-    "scraperjs": "^0.3.0"
+    "istanbul": "^0.4.0",
+    "jscs": "^2.0.0",
+    "jscs-jsdoc": "^1.0.0",
+    "remark": "^3.0.0",
+    "remark-comment-config": "^2.0.2",
+    "remark-github": "^3.0.0",
+    "remark-lint": "^2.2.1",
+    "remark-slug": "^3.0.1",
+    "remark-validate-links": "^2.0.2",
+    "scraperjs": "^1.2.0",
+    "tape": "^4.0.0"
   },
   "scripts": {
-    "test": "_mocha --check-leaks test.js",
-    "test-travis": "istanbul cover _mocha --report lcovonly -- --check-leaks test.js",
-    "coverage": "istanbul cover _mocha -- -- test.js",
-    "lint": "npm run lint-api && npm run lint-test && npm run lint-script && npm run lint-style",
-    "lint-api": "eslint index.js",
-    "lint-test": "eslint --env mocha test.js",
-    "lint-script": "eslint script/scrape-data.js script/build-data.js script/build-support.js",
-    "lint-style": "jscs --reporter inline index.js script/scrape-data.js script/build-data.js script/build-support.js test.js",
-    "make": "npm run lint && npm run coverage",
-    "scrape-data": "node script/scrape-data.js",
+    "build-md": "remark . --quiet --frail",
     "build-data": "node script/build-data.js",
     "build-support": "node script/build-support.js",
-    "bundle": "browserify index.js -s buzzwords > buzzwords.js",
-    "postbundle": "esmangle buzzwords.js > buzzwords.min.js",
-    "build": "npm run scrape-data && npm run build-data && npm run build-support && npm run bundle",
-    "prepublish": "npm run build"
+    "build-bundle": "browserify index.js --bare -s buzzwords > buzzwords.js",
+    "build-mangle": "esmangle buzzwords.js > buzzwords.min.js",
+    "build": "npm run build-md && npm run build-data && npm run build-support && npm run build-bundle && npm run build-mangle",
+    "lint-api": "eslint .",
+    "lint-style": "jscs --reporter inline .",
+    "lint": "npm run lint-api && npm run lint-style",
+    "test-api": "node test.js",
+    "test-coverage": "istanbul cover test.js",
+    "test": "npm run build && npm run lint && npm run test-coverage"
   }
 }
