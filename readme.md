@@ -16,9 +16,9 @@ AMD, CommonJS, and globals module, [uncompressed and compressed][releases].
 ## Usage
 
 ```js
-var buzzwords = require("buzzwords");
+var buzzwords = require('buzzwords');
 
-buzzwords.length; // 162
+buzzwords.length; // 235
 
 console.log(buzzwords.slice(0, 10));
 ```
@@ -27,16 +27,16 @@ Yields:
 
 ```json
 [
-  "a bit",
-  "about",
-  "actually",
-  "allege",
-  "alleged",
-  "almost",
-  "almost never",
-  "always",
-  "and all that",
-  "and so forth"
+  "4g",
+  "accountable talk",
+  "adaptive learning",
+  "aggregator",
+  "agile",
+  "ajax",
+  "algorithm",
+  "alignment",
+  "analytics",
+  "antifragile"
 ]
 ```
 
