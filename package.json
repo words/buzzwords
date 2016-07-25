@@ -20,7 +20,7 @@
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "dependencies": {},
   "devDependencies": {
-    "browserify": "^13.0.0",
+    "browserify": "^13.1.0",
     "eslint": "^1.0.0",
     "esmangle": "^1.0.0",
     "istanbul": "^0.4.0",
