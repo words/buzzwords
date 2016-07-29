@@ -2,6 +2,11 @@
 
 <!--lint disable no-multiple-toplevel-headings-->
 
+1.0.2 / 2016-07-29
+==================
+
+*   Refactor code-style ([`9f4d7cf`](https://github.com/wooorm/buzzwords/commit/9f4d7cf))
+
 1.0.1 / 2016-01-15
 ==================
 
