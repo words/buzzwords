@@ -37,7 +37,7 @@
     "build-generate": "node script/generate.js",
     "build-bundle": "browserify index.js --bare -s buzzwords > buzzwords.js",
     "build-mangle": "esmangle buzzwords.js > buzzwords.min.js",
-    "build": "npm run build-md && npm run build-generate && npm run build-bundle && npm run build-mangle",
+    "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
     "lint": "xo",
     "test-api": "node test",
     "test-coverage": "nyc --reporter lcov tape test.js",
