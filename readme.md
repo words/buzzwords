@@ -41,7 +41,7 @@ Yields:
 
 ### `buzzwords`
 
-**buzzwords** exposes _big data_ as an list of strings (`Array.<string>`).
+**buzzwords** exposes _big data_ as a list of strings (`Array.<string>`).
 
 ## Support
 
