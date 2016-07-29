@@ -10,9 +10,6 @@ List of _bleeding edge_ English buzzwords.
 npm install buzzwords
 ```
 
-**buzzwords** is also available for [duo][duo-install], and as an
-AMD, CommonJS, and globals module, [uncompressed and compressed][releases].
-
 ## Usage
 
 ```js
@@ -44,13 +41,12 @@ Yields:
 
 ### `buzzwords`
 
-**Type**: `Array.<string>` — **buzzwords** exposes _big data_ as an
-list of strings.
+**buzzwords** exposes _big data_ as an list of strings (`Array.<string>`).
 
 ## Support
 
 For a complete list of _next generation_ buzzwords and -phrases, see
-[support.md][support].
+[index.json][data].
 
 Note that the _countless_ words listed in **buzzwords** might **not** be
 buzzwords in certain contexts; the list just takes a _holistic approach_ in
@@ -60,19 +56,14 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 
 *   [dale-chall](https://github.com/wooorm/dale-chall)
     — List of familiar American-English words (1995);
-
 *   [fillers](https://github.com/wooorm/fillers)
     — List of filler words;
-
 *   [hedges](https://github.com/wooorm/hedges)
     — List of hedge words;
-
 *   [profanities](https://github.com/wooorm/profanities)
     — List of profane words;
-
 *   [spache](https://github.com/wooorm/spache)
     — List of simple American-English words (1974);
-
 *   [weasels](https://github.com/wooorm/weasels)
     — List of weasel words.
 
@@ -92,12 +83,8 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 
 [npm-install]: https://docs.npmjs.com/cli/install
 
-[duo-install]: http://duojs.org/#getting-started
-
-[releases]: https://github.com/wooorm/buzzwords/releases
-
 [license]: LICENSE
 
-[support]: support.md
-
 [author]: http://wooorm.com
+
+[data]: index.js
