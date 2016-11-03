@@ -18,7 +18,7 @@ Scraper.DynamicScraper
   .create('http://en.wikipedia.org/wiki/List_of_buzzwords')
   .scrape(scrape, function (results) {
     var list = JSON.stringify(parse(results), 0, 2) + '\n';
-    fs.writeFileSync(path.join(__dirname, '..', 'index.json'), list);
+    fs.writeFileSync(path.join(__dirname, 'index.json'), list);
   });
 
 /**
@@ -61,7 +61,7 @@ function parse(values) {
       var match;
 
       /* Remove cites. */
-      value = value.replace(/\[[^\]]+\]\*?/g, '');
+      value = value.replace(/\[[^\]]+]\*?/g, '');
 
       /* Split comment from buzzword. */
       match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/);
