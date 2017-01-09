@@ -15,7 +15,7 @@ npm install buzzwords
 ```js
 var buzzwords = require('buzzwords');
 
-buzzwords.length; // 235
+buzzwords.length; // 251
 
 console.log(buzzwords.slice(0, 10));
 ```
