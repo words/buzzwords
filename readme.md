@@ -1,4 +1,4 @@
-# buzzwords [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# buzzwords [![Build Status][travis-badge]][travis]
 
 List of _bleeding edge_ English buzzwords.
 
@@ -76,10 +76,6 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 [travis-badge]: https://img.shields.io/travis/wooorm/buzzwords.svg
 
 [travis]: https://travis-ci.org/wooorm/buzzwords
-
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/buzzwords.svg
-
-[codecov]: https://codecov.io/github/wooorm/buzzwords
 
 [npm-install]: https://docs.npmjs.com/cli/install
 
