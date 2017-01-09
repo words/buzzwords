@@ -87,4 +87,4 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 
 [author]: http://wooorm.com
 
-[data]: index.js
+[data]: index.json
