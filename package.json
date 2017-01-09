@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build-md": "remark . --quiet --frail",
-    "build-generate": "node script/generate.js",
+    "build-generate": "node build",
     "build-bundle": "browserify index.js --bare -s buzzwords > buzzwords.js",
     "build-mangle": "esmangle buzzwords.js > buzzwords.min.js",
     "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
