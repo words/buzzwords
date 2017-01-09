@@ -1,7 +1,6 @@
 language: node_js
 node_js:
 - '4.0'
-- '5.0'
 - '6.0'
 deploy:
   - provider: npm
@@ -10,7 +9,7 @@ deploy:
       secure: C6RQy/wzWpGIsAcr0/ygVvtSr7tqBq/213uk5qlVYsa+2lgivp6cT0HbZL/FQmqi/AO8UOu86ZX7vHTEiZGH0AivfIg40QYZzDqChnqaUsirbh8alvcNcWaM2m3Jrwp3jmI9+tzka8hXN2F4Jleh+DLIhbdcF9rO9LhC5CI1R3E=
     on:
       tags: true
-      node: '5.0'
+      node: '4.0'
   - provider: releases
     api_key:
       secure: MgivSHNf155rM2ADqD7O/DjII4pZE/4rghLe96xrFa3kbr9+C5SfrwEG9DQ5YEFq1bQnkvS3jGOUiWB5oA0AGU3AofpGh/vxxOlMQ9O0re0ATi+CBnjFpsPT27BDSG0l0YnEtOGRuTF7KTRCSLmMhlRLFZHsqardeavfc+EeufM=
