@@ -20,12 +20,13 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "bail": "^1.0.1",
     "browserify": "^13.0.1",
     "esmangle": "^1.0.1",
+    "jsdom": "^9.8.3",
     "nyc": "^10.0.0",
     "remark-cli": "^2.0.0",
     "remark-preset-wooorm": "^1.0.0",
-    "scraperjs": "^1.2.0",
     "tape": "^4.0.0",
     "xo": "^0.17.0"
   },
