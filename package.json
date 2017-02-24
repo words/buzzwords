@@ -24,13 +24,13 @@
     "browserify": "^14.0.0",
     "esmangle": "^1.0.1",
     "jsdom": "^9.8.3",
-    "remark-cli": "^2.0.0",
-    "remark-preset-wooorm": "^1.0.0",
+    "remark-cli": "^3.0.0",
+    "remark-preset-wooorm": "^2.0.0",
     "tape": "^4.0.0",
     "xo": "^0.17.0"
   },
   "scripts": {
-    "build-md": "remark . --quiet --frail",
+    "build-md": "remark . -qfo",
     "build-generate": "node build",
     "build-bundle": "browserify index.json --bare -s buzzwords > buzzwords.js",
     "build-mangle": "esmangle buzzwords.js > buzzwords.min.js",
@@ -46,7 +46,6 @@
     ]
   },
   "remarkConfig": {
-    "output": true,
-    "presets": "wooorm"
+    "plugins": ["preset-wooorm"]
   }
 }
