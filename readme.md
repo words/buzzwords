@@ -4,7 +4,7 @@ List of _bleeding edge_ English buzzwords.
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install buzzwords
@@ -15,7 +15,7 @@ npm install buzzwords
 ```js
 var buzzwords = require('buzzwords');
 
-buzzwords.length; // 251
+buzzwords.length; //=> 251
 
 console.log(buzzwords.slice(0, 10));
 ```
@@ -41,7 +41,7 @@ Yields:
 
 ### `buzzwords`
 
-**buzzwords** exposes _big data_ as a list of strings (`Array.<string>`).
+`buzzwords` exposes _big data_ as a list of strings (`Array.<string>`).
 
 ## Support
 
@@ -54,18 +54,18 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 
 ## Related
 
-*   [dale-chall](https://github.com/wooorm/dale-chall)
-    — List of familiar American-English words (1995);
-*   [fillers](https://github.com/wooorm/fillers)
-    — List of filler words;
-*   [hedges](https://github.com/wooorm/hedges)
-    — List of hedge words;
-*   [profanities](https://github.com/wooorm/profanities)
-    — List of profane words;
-*   [spache](https://github.com/wooorm/spache)
-    — List of simple American-English words (1974);
-*   [weasels](https://github.com/wooorm/weasels)
-    — List of weasel words.
+*   [`dale-chall`](https://github.com/wooorm/dale-chall)
+    — List of familiar American-English words (1995)
+*   [`fillers`](https://github.com/wooorm/fillers)
+    — List of filler words
+*   [`hedges`](https://github.com/wooorm/hedges)
+    — List of hedge words
+*   [`profanities`](https://github.com/wooorm/profanities)
+    — List of profane words
+*   [`spache`](https://github.com/wooorm/spache)
+    — List of simple American-English words (1974)
+*   [`weasels`](https://github.com/wooorm/weasels)
+    — List of weasel words
 
 ## License
 
@@ -77,7 +77,7 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 
 [travis]: https://travis-ci.org/wooorm/buzzwords
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: LICENSE
 
