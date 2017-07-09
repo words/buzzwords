@@ -1,66 +1,48 @@
 'use strict';
 
 var fs = require('fs');
+var https = require('https');
 var bail = require('bail');
-var jsdom = require('jsdom');
+var concat = require('concat-stream');
+var unified = require('unified');
+var parse = require('rehype-parse');
+var selectAll = require('hast-util-select').selectAll;
+var toString = require('hast-util-to-string');
 
-jsdom.env('http://en.wikipedia.org/wiki/List_of_buzzwords', done);
+https.get('https://en.wikipedia.org/wiki/List_of_buzzwords', function (res) {
+  res.pipe(concat(onconcat)).on('error', bail);
 
-function done(err, win) {
-  var values;
+  function onconcat(buf) {
+    var tree = unified().use(parse).parse(buf);
+    var values = selectAll('#mw-content-text > ul li, .columns > ul li', tree)
+      .map(function (node) {
+        return toString(node.children[0]);
+      })
+      .map(function (value) {
+        /* Split comment from buzzword. */
+        var match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/);
 
-  bail(err);
+        if (match) {
+          value = match[1];
+        }
 
-  values = [].slice.call(win.document.querySelectorAll('#mw-content-text > ul li, .columns > ul li'))
-    .filter(function (node) {
-      return !node.className.trim();
-    })
-    .filter(function (node) {
-      if (!node.parentNode.previousElementSibling) {
-        return true;
-      }
+        /* Remove abbreviation from buzzword. */
+        value = value.replace(/^[A-Z]+[-–/] /, '');
 
-      return !/see also|external links/i.test(
-        node.parentNode.previousElementSibling.textContent
-      );
-    })
-    .map(function (node) {
-      var head = node.childNodes[0];
-      return (head.tagName === 'A' ? head : node).textContent;
-    })
-    .map(function (value) {
-      var match;
+        /* Remove multiple cases. */
+        value = value.replace(/\/\w.+/, '');
 
-      /* Remove cites. */
-      value = value.replace(/\[[^\]]+]\*?/g, '');
+        return value.toLowerCase().trim();
+      })
+      .filter(function (value) {
+        var head = value.charAt(0);
+        return value !== 'uc' && head !== '-' && head !== '_';
+      })
+      .filter(function (value, index, all) {
+        return all.indexOf(value, index + 1) === -1;
+      })
+      .sort();
 
-      /* Split comment from buzzword. */
-      match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/);
-
-      if (match) {
-        value = match[1];
-      }
-
-      /* Remove abbreviation from buzzword. */
-      value = value.replace(/^[A-Z]+[-–/] /, '');
-
-      /* Remove multiple cases. */
-      value = value.replace(/\/\w.+/, '');
-
-      return value.toLowerCase().trim();
-    })
-    .filter(function (value) {
-      var head = value.charAt(0);
-      return head !== '-' && head !== '_' && value.charAt(value.length - 1) !== '?';
-    })
-    .filter(function (value) {
-      return value !== 'uc' && value !== 'that' && !/_blank_/.test(value);
-    })
-    .filter(Boolean)
-    .filter(function (value, index, all) {
-      return all.indexOf(value, index + 1) === -1;
-    })
-    .sort();
-
-  fs.writeFile('index.json', JSON.stringify(values, 0, 2) + '\n', bail);
-}
+    fs.writeFile('index.json', JSON.stringify(values, 0, 2) + '\n', bail);
+  }
+});
