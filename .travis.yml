@@ -1,7 +1,7 @@
 language: node_js
 node_js:
 - '4.0'
-- '8.0'
+- '9.0'
 deploy:
   - provider: npm
     email: tituswormer@gmail.com
@@ -9,7 +9,7 @@ deploy:
       secure: C6RQy/wzWpGIsAcr0/ygVvtSr7tqBq/213uk5qlVYsa+2lgivp6cT0HbZL/FQmqi/AO8UOu86ZX7vHTEiZGH0AivfIg40QYZzDqChnqaUsirbh8alvcNcWaM2m3Jrwp3jmI9+tzka8hXN2F4Jleh+DLIhbdcF9rO9LhC5CI1R3E=
     on:
       tags: true
-      node: '4.0'
+      node: '9.0'
   - provider: releases
     skip_cleanup: true
     api_key:
@@ -19,4 +19,4 @@ deploy:
       - "buzzwords.min.js"
     on:
       tags: true
-      node: '8.0'
+      node: '9.0'
