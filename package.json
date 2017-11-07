@@ -8,8 +8,8 @@
     "word",
     "list"
   ],
-  "repository": "https://github.com/wooorm/buzzwords",
-  "bugs": "https://github.com/wooorm/buzzwords/issues",
+  "repository": "words/buzzwords",
+  "bugs": "https://github.com/words/buzzwords/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"

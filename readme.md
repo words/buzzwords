@@ -73,9 +73,9 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/buzzwords.svg
+[travis-badge]: https://img.shields.io/travis/words/buzzwords.svg
 
-[travis]: https://travis-ci.org/wooorm/buzzwords
+[travis]: https://travis-ci.org/words/buzzwords
 
 [npm]: https://docs.npmjs.com/cli/install
 
