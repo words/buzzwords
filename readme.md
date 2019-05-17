@@ -81,6 +81,6 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
 
 [data]: index.json
