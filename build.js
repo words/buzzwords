@@ -25,17 +25,17 @@ function onconcat(buf) {
       return toString(node.children[0])
     })
     .map(function(value) {
-      /* Split comment from buzzword. */
+      // Split comment from buzzword.
       var match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/)
 
       if (match) {
         value = match[1]
       }
 
-      /* Remove abbreviation from buzzword. */
+      // Remove abbreviation from buzzword.
       value = value.replace(/^[A-Z]+[-–/] /, '')
 
-      /* Remove multiple cases. */
+      // Remove multiple cases.
       value = value.replace(/\/\w.+/, '')
 
       return value.toLowerCase().trim()
