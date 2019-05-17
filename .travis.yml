@@ -1,22 +1,15 @@
 language: node_js
+sudo: false
 node_js:
-- '4.0'
-- '9.0'
+  - lts/dubnium
+  - node
 deploy:
-  - provider: npm
-    email: tituswormer@gmail.com
-    api_key:
-      secure: C6RQy/wzWpGIsAcr0/ygVvtSr7tqBq/213uk5qlVYsa+2lgivp6cT0HbZL/FQmqi/AO8UOu86ZX7vHTEiZGH0AivfIg40QYZzDqChnqaUsirbh8alvcNcWaM2m3Jrwp3jmI9+tzka8hXN2F4Jleh+DLIhbdcF9rO9LhC5CI1R3E=
-    on:
-      tags: true
-      node: '9.0'
-  - provider: releases
-    skip_cleanup: true
-    api_key:
-      secure: MgivSHNf155rM2ADqD7O/DjII4pZE/4rghLe96xrFa3kbr9+C5SfrwEG9DQ5YEFq1bQnkvS3jGOUiWB5oA0AGU3AofpGh/vxxOlMQ9O0re0ATi+CBnjFpsPT27BDSG0l0YnEtOGRuTF7KTRCSLmMhlRLFZHsqardeavfc+EeufM=
-    file:
-      - "buzzwords.js"
-      - "buzzwords.min.js"
-    on:
-      tags: true
-      node: '9.0'
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: JYwdA6NJp19PaPgOTzI/7yrc57vhiIpGwTusPgTSiDFVb5TQ9JWU74Elurx9BhhjWYrNW4LdgrXQDEQW0UL8T8oAZqW5APYfuKysFNztaz0sb2Si4KjIFBsP4vu8r5wZ+5W8Ju6AT6IuaYkxqWV9r9hZ6Lc9zWbcgl6tXGZgfqU=
+  file:
+    - 'buzzwords.js'
+    - 'buzzwords.min.js'
+  on:
+    tags: true
