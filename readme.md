@@ -13,11 +13,11 @@ npm install buzzwords
 ## Usage
 
 ```js
-var buzzwords = require('buzzwords');
+var buzzwords = require('buzzwords')
 
-buzzwords.length; //=> 251
+buzzwords.length //=> 251
 
-console.log(buzzwords.slice(0, 10));
+console.log(buzzwords.slice(0, 10))
 ```
 
 Yields:
