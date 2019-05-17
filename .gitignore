@@ -3,3 +3,4 @@
 node_modules/
 buzzwords.js
 buzzwords.min.js
+yarn.lock
