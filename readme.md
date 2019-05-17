@@ -79,7 +79,7 @@ _cloud computing_ with a _bleeding edge_ _algorithm_.
 
 [npm]: https://docs.npmjs.com/cli/install
 
-[license]: LICENSE
+[license]: license
 
 [author]: http://wooorm.com
 
