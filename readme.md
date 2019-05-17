@@ -19,25 +19,25 @@ npm install buzzwords
 ```js
 var buzzwords = require('buzzwords')
 
-buzzwords.length //=> 251
+console.log(buzzwords.length) //=> 253
 
 console.log(buzzwords.slice(0, 10))
 ```
 
 Yields:
 
-```json
+```js
 [
-  "4g",
-  "accountable talk",
-  "adaptive learning",
-  "aggregator",
-  "agile",
-  "ajax",
-  "algorithm",
-  "alignment",
-  "analytics",
-  "antifragile"
+  '4g',
+  'accountable talk',
+  'aggregator',
+  'agile',
+  'ajax',
+  'algorithm',
+  'alignment',
+  'analytics',
+  'andon',
+  'artisan'
 ]
 ```
 
