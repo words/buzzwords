@@ -1,6 +1,6 @@
 # buzzwords [![Build Status][travis-badge]][travis]
 
-List of _bleeding edge_ English buzzwords.
+List of *bleeding edge* English buzzwords.
 
 ## Installation
 
@@ -41,16 +41,16 @@ Yields:
 
 ### `buzzwords`
 
-`buzzwords` exposes _big data_ as a list of strings (`Array.<string>`).
+`buzzwords` exposes *big data* as a list of strings (`Array.<string>`).
 
 ## Support
 
-For a complete list of _next generation_ buzzwords and -phrases, see
+For a complete list of *next generation* buzzwords and -phrases, see
 [index.json][data].
 
-Note that the _countless_ words listed in **buzzwords** might **not** be
-buzzwords in certain contexts; the list just takes a _holistic approach_ in
-_cloud computing_ with a _bleeding edge_ _algorithm_.
+Note that the *countless* words listed in **buzzwords** might **not** be
+buzzwords in certain contexts; the list just takes a *holistic approach* in
+*cloud computing* with a *bleeding edge* *algorithm*.
 
 ## Related
 
