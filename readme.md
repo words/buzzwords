@@ -1,4 +1,8 @@
-# buzzwords [![Build Status][travis-badge]][travis]
+# buzzwords
+
+[![Build][build-badge]][build]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 List of *bleeding edge* English buzzwords.
 
@@ -73,9 +77,17 @@ buzzwords in certain contexts; the list just takes a *holistic approach* in
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/words/buzzwords.svg
+[build-badge]: https://img.shields.io/travis/words/buzzwords.svg
 
-[travis]: https://travis-ci.org/words/buzzwords
+[build]: https://travis-ci.org/words/buzzwords
+
+[downloads-badge]: https://img.shields.io/npm/dm/buzzwords.svg
+
+[downloads]: https://www.npmjs.com/package/buzzwords
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/buzzwords.svg
+
+[size]: https://bundlephobia.com/result?p=buzzwords
 
 [npm]: https://docs.npmjs.com/cli/install
 
