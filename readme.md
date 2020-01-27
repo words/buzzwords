@@ -6,15 +6,15 @@
 
 List of *bleeding edge* English buzzwords.
 
-## Installation
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install buzzwords
 ```
 
-## Usage
+## Use
 
 ```js
 var buzzwords = require('buzzwords')
@@ -50,7 +50,7 @@ Yields:
 ## Support
 
 For a complete list of *next generation* buzzwords and -phrases, see
-[index.json][data].
+[`index.json`][data].
 
 Note that the *countless* words listed in **buzzwords** might **not** be
 buzzwords in certain contexts; the list just takes a *holistic approach* in
