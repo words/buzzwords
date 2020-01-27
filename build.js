@@ -45,7 +45,7 @@ function onconcat(buf) {
       return value !== 'uc' && head !== '-' && head !== '_'
     })
     .filter(function(value, index, all) {
-      return all.indexOf(value, index + 1) === -1
+      return !all.includes(value, index + 1)
     })
     .sort()
 
