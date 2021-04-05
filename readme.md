@@ -23,7 +23,7 @@ npm install buzzwords
 ```js
 import {buzzwords} from 'buzzwords'
 
-console.log(buzzwords.length) //=> 253
+console.log(buzzwords.length) //=> 274
 
 console.log(buzzwords.slice(0, 10))
 ```
@@ -33,15 +33,15 @@ Yields:
 ```js
 [
   '4g',
+  '5g',
   'accountable talk',
-  'aggregator',
   'agile',
   'ajax',
   'algorithm',
   'alignment',
-  'analytics',
-  'andon',
-  'artisan'
+  'ambiguity',
+  'amplify',
+  'analytics'
 ]
 ```
 
