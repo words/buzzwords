@@ -57,7 +57,7 @@ There is no default export.
 ## Support
 
 For a complete list of *next generation* buzzwords and -phrases, see
-[`index.json`][data].
+[`index.js`][data].
 
 Note that the *countless* words listed in **buzzwords** might **not** be
 buzzwords in certain contexts; the list just takes a *holistic approach* in
