@@ -9,7 +9,7 @@ var parse = require('rehype-parse')
 var selectAll = require('hast-util-select').selectAll
 var toString = require('hast-util-to-string')
 
-https.get('https://en.wikipedia.org/wiki/List_of_buzzwords', onresponse)
+https.get('https://en.wikipedia.org/wiki/Buzzword', onresponse)
 
 function onresponse(response) {
   response.pipe(concat(onconcat)).on('error', bail)
@@ -18,7 +18,7 @@ function onresponse(response) {
 function onconcat(buf) {
   var tree = unified().use(parse).parse(buf)
 
-  var values = selectAll('#mw-content-text > ul li, .columns > ul li', tree)
+  var values = selectAll('.div-col > ul li', tree)
     .map(function (node) {
       return toString(node.children[0])
     })
