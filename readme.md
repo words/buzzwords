@@ -1,6 +1,7 @@
 # buzzwords
 
 [![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
@@ -77,9 +78,13 @@ buzzwords in certain contexts; the list just takes a *holistic approach* in
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/words/buzzwords.svg
+[build-badge]: https://github.com/words/buzzwords/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/words/buzzwords
+[build]: https://github.com/words/buzzwords/actions
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/words/buzzwords.svg
+
+[coverage]: https://codecov.io/github/words/buzzwords
 
 [downloads-badge]: https://img.shields.io/npm/dm/buzzwords.svg
 
