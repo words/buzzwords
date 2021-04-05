@@ -11,20 +11,18 @@ var toString = require('hast-util-to-string')
 
 https.get('https://en.wikipedia.org/wiki/List_of_buzzwords', onresponse)
 
-function onresponse(res) {
-  res.pipe(concat(onconcat)).on('error', bail)
+function onresponse(response) {
+  response.pipe(concat(onconcat)).on('error', bail)
 }
 
 function onconcat(buf) {
-  var tree = unified()
-    .use(parse)
-    .parse(buf)
+  var tree = unified().use(parse).parse(buf)
 
   var values = selectAll('#mw-content-text > ul li, .columns > ul li', tree)
-    .map(function(node) {
+    .map(function (node) {
       return toString(node.children[0])
     })
-    .map(function(value) {
+    .map(function (value) {
       // Split comment from buzzword.
       var match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/)
 
@@ -40,11 +38,11 @@ function onconcat(buf) {
 
       return value.toLowerCase().trim()
     })
-    .filter(function(value) {
+    .filter(function (value) {
       var head = value.charAt(0)
       return value !== 'uc' && head !== '-' && head !== '_'
     })
-    .filter(function(value, index, all) {
+    .filter(function (value, index, all) {
       return !all.includes(value, index + 1)
     })
     .sort()
