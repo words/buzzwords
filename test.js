@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var buzzwords = require('.')
+import test from 'tape'
+import {buzzwords} from './index.js'
 
 test('buzzwords', function (t) {
   t.equal(Array.isArray(buzzwords), true, 'should be an array')

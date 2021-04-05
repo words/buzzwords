@@ -9,6 +9,9 @@ List of *bleeding edge* English buzzwords.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -18,7 +21,7 @@ npm install buzzwords
 ## Use
 
 ```js
-var buzzwords = require('buzzwords')
+import {buzzwords} from 'buzzwords'
 
 console.log(buzzwords.length) //=> 253
 
@@ -43,6 +46,9 @@ Yields:
 ```
 
 ## API
+
+This package exports the following identifiers: `buzzwords`.
+There is no default export.
 
 ### `buzzwords`
 
@@ -100,4 +106,4 @@ buzzwords in certain contexts; the list just takes a *holistic approach* in
 
 [author]: https://wooorm.com
 
-[data]: index.json
+[data]: index.js
