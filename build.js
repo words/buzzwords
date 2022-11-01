@@ -1,63 +1,38 @@
-import fs from 'node:fs'
-import https from 'node:https'
-import {bail} from 'bail'
-import concat from 'concat-stream'
+import {promises as fs} from 'node:fs'
+import fetch from 'node-fetch'
 import {unified} from 'unified'
 import rehypeParse from 'rehype-parse'
 import {selectAll} from 'hast-util-select'
 import {toString} from 'hast-util-to-string'
 
-https.get('https://en.wikipedia.org/wiki/Buzzword', onresponse)
+const response = await fetch('https://en.wikipedia.org/wiki/Buzzword')
+const body = await response.text()
+const tree = unified().use(rehypeParse).parse(body)
+const elements = selectAll('.div-col > ul li', tree)
+const names = elements.map((node) => toString(node.children[0]))
+const clean = names.map((value) => {
+  const match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/)
 
-/**
- * @param {import('http').IncomingMessage} response
- */
-function onresponse(response) {
-  response.pipe(concat(onconcat)).on('error', bail)
-}
+  if (match) {
+    value = match[1]
+  }
 
-/**
- * @param {Buffer} buf
- */
-function onconcat(buf) {
-  const tree = unified().use(rehypeParse).parse(buf)
+  // Remove abbreviation from buzzword.
+  value = value.replace(/^[A-Z]+[-–/] /, '')
 
-  const values = selectAll('.div-col > ul li', tree)
-    .map(function (/** @type {import('hast').Element} */ node) {
-      return toString(node.children[0])
-    })
-    .map(function (/** @type {string} */ value) {
-      // Split comment from buzzword.
-      const match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/)
+  // Remove multiple cases.
+  value = value.replace(/\/\w.+/, '')
 
-      if (match) {
-        value = match[1]
-      }
+  return value.toLowerCase().trim()
+})
+const filtered = clean.filter((value) => {
+  const head = value.charAt(0)
+  return value !== 'uc' && head !== '-' && head !== '_'
+})
 
-      // Remove abbreviation from buzzword.
-      value = value.replace(/^[A-Z]+[-–/] /, '')
+const values = [...new Set(filtered)].sort()
 
-      // Remove multiple cases.
-      value = value.replace(/\/\w.+/, '')
-
-      return value.toLowerCase().trim()
-    })
-    .filter(function (/** @type {string} */ value) {
-      const head = value.charAt(0)
-      return value !== 'uc' && head !== '-' && head !== '_'
-    })
-    .filter(function (
-      /** @type {string} */ value,
-      /** @type {number} */ index,
-      /** @type {Array.<string>} */ all
-    ) {
-      return all.indexOf(value) === index
-    })
-    .sort()
-
-  fs.writeFile(
-    'index.js',
-    'export const buzzwords = ' + JSON.stringify(values, null, 2) + '\n',
-    bail
-  )
-}
+await fs.writeFile(
+  'index.js',
+  'export const buzzwords = ' + JSON.stringify(values, null, 2) + '\n'
+)

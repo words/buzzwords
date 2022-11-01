@@ -27,16 +27,14 @@
     "index.js"
   ],
   "devDependencies": {
-    "@types/concat-stream": "^2.0.0",
     "@types/hast": "^2.0.0",
     "@types/node": "^18.0.0",
+    "@types/node-fetch": "^2.0.0",
     "@types/tape": "^4.0.0",
-    "bail": "^2.0.0",
-    "browserify": "^17.0.0",
     "c8": "^7.0.0",
-    "concat-stream": "^2.0.0",
     "hast-util-select": "^5.0.0",
     "hast-util-to-string": "^2.0.0",
+    "node-fetch": "^3.0.0",
     "prettier": "^2.0.0",
     "rehype-parse": "^8.0.0",
     "remark-cli": "^11.0.0",
