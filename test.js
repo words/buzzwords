@@ -1,9 +1,8 @@
-import test from 'tape'
+import assert from 'node:assert'
+import test from 'node:test'
 import {buzzwords} from './index.js'
 
-test('buzzwords', function (t) {
-  t.equal(Array.isArray(buzzwords), true, 'should be an array')
-  t.notEqual(buzzwords.indexOf('millennial'), -1, 'should contain words')
-
-  t.end()
+test('buzzwords', function () {
+  assert.equal(Array.isArray(buzzwords), true, 'should be an array')
+  assert.notEqual(buzzwords.indexOf('millennial'), -1, 'should contain words')
 })
