@@ -26,8 +26,12 @@ const clean = names.map((value) => {
   return value.toLowerCase().trim()
 })
 const filtered = clean.filter((value) => {
-  const head = value.charAt(0)
-  return value !== 'uc' && head !== '-' && head !== '_'
+  return (
+    value !== 'uc' &&
+    !value.startsWith('-') &&
+    !value.startsWith('_') &&
+    !value.startsWith('$_')
+  )
 })
 
 const values = [...new Set(filtered)].sort()
