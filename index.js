@@ -1,4 +1,4 @@
-export var buzzwords = [
+export const buzzwords = [
   '4g',
   '5g',
   'accountable talk',

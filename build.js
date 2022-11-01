@@ -1,13 +1,11 @@
-import fs from 'fs'
-import https from 'https'
+import fs from 'node:fs'
+import https from 'node:https'
 import {bail} from 'bail'
 import concat from 'concat-stream'
-import unified from 'unified'
-import parse from 'rehype-parse'
-// @ts-ignore remove when typed
-import $ from 'hast-util-select'
-// @ts-ignore remove when typed
-import toString from 'hast-util-to-string'
+import {unified} from 'unified'
+import rehypeParse from 'rehype-parse'
+import {selectAll} from 'hast-util-select'
+import {toString} from 'hast-util-to-string'
 
 https.get('https://en.wikipedia.org/wiki/Buzzword', onresponse)
 
@@ -22,15 +20,15 @@ function onresponse(response) {
  * @param {Buffer} buf
  */
 function onconcat(buf) {
-  var tree = unified().use(parse).parse(buf)
+  const tree = unified().use(rehypeParse).parse(buf)
 
-  var values = $.selectAll('.div-col > ul li', tree)
+  const values = selectAll('.div-col > ul li', tree)
     .map(function (/** @type {import('hast').Element} */ node) {
       return toString(node.children[0])
     })
     .map(function (/** @type {string} */ value) {
       // Split comment from buzzword.
-      var match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/)
+      const match = value.match(/^([\s\S+]+?)( [-–/] ?|\(|,)/)
 
       if (match) {
         value = match[1]
@@ -45,7 +43,7 @@ function onconcat(buf) {
       return value.toLowerCase().trim()
     })
     .filter(function (/** @type {string} */ value) {
-      var head = value.charAt(0)
+      const head = value.charAt(0)
       return value !== 'uc' && head !== '-' && head !== '_'
     })
     .filter(function (
@@ -59,7 +57,7 @@ function onconcat(buf) {
 
   fs.writeFile(
     'index.js',
-    'export var buzzwords = ' + JSON.stringify(values, null, 2) + '\n',
+    'export const buzzwords = ' + JSON.stringify(values, null, 2) + '\n',
     bail
   )
 }
